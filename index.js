@@ -4,6 +4,7 @@ import morgan from "morgan";
 import path from "path";
 import 'dotenv/config';
 import './src/database/db_conexion'
+import rutaColores from "./src/routes/codigoColores.routes";
 
 const app = express();
 
@@ -17,3 +18,5 @@ app.use(express.json());
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '/public')));
 
+// ruta
+app.use('/apiColores',rutaColores);
