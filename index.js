@@ -9,6 +9,7 @@ const app = express();
 
 // puerto
 app.set('port',4000);
+app.listen( app.get('port'), ()=>{console.log('se esta ejecutando en el puerto: '+app.get('port'))} );
 
 // middelwares
 app.use(cors());
